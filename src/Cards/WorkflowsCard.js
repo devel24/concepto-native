@@ -1,6 +1,5 @@
 import React from "react";
 import { ImageBackground, Button, View } from "react-native";
-import ViewOverflow from 'react-native-view-overflow';
 
 const containerStyle = {
     // flex: 1,
@@ -27,7 +26,7 @@ const innerContainerStyle = {
   }
 
 const App = () => (
-    <ViewOverflow style={containerStyle}>
+    <View style={containerStyle}>
         <View style={buttonStyle}>
             <Button title="Checar Entrada" />
         </View>
@@ -37,7 +36,8 @@ const App = () => (
         <View style={buttonStyle}>
             <Button style={buttonStyle} title="Última Nómina" />
         </View>
-    </ViewOverflow>
+    
+  </View>
 );
 
 export default App;
