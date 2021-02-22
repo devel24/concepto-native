@@ -16,7 +16,8 @@ const Tab = createBottomTabNavigator();
 const containerStyle = {
   flex: 1,
   flexDirection: 'column',
-  paddingTop: 45
+  // paddingTop: 45,
+  // paddingBottom: 45
 };
 
 const options = ({ route }) => ({

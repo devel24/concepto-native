@@ -1,43 +1,58 @@
 import React from "react";
-import { ImageBackground, Button, View } from "react-native";
+import { Image, ImageBackground, Button, View, Text, SafeAreaView, ScrollView, StatusBar } from "react-native";
+
+const buttonStyle = {
+  flex: 1,
+  justifyContent: 'flex-end',
+  padding: 5
+}
 
 const containerStyle = {
-    // flex: 1,
-    flexDirection: "row",
-    paddingHorizontal:10,
-  }
-
-const imageStyle = {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-    height: 100
-  }
+  flexDirection: "row",
+}
 
 const innerContainerStyle = {
-    flex: 1,
-    flexDirection: "column"
-  }
+  flex: 1,
+  flexDirection: "row",
+  height: 100,
+  marginLeft: 15,
+}
 
-  const buttonStyle = {
-      flex: 1,
-      marginLeft: 10,
-    //   backgroundColor:"blue"
-  }
+const image = { uri: "https://ak.picdn.net/shutterstock/videos/25384697/thumb/11.jpg" };
 
-const App = () => (
+const imageStyle = {
+  height: 100,
+};
+
+export default function WorkflowsCard() {
+  return (
     <View style={containerStyle}>
-        <View style={buttonStyle}>
+      <ImageBackground source={image} style={imageStyle}>
+        <ScrollView
+          horizontal={true}
+          style={innerContainerStyle}
+          showsHorizontalScrollIndicator={true} >
+          <View style={buttonStyle}>
             <Button title="Checar Entrada" />
-        </View>
-        <View style={buttonStyle}>
+          </View>
+          <View style={buttonStyle}>
             <Button style={buttonStyle} title="Organigrama" />
-        </View>
-        <View style={buttonStyle}>
+          </View>
+          <View style={buttonStyle}>
             <Button style={buttonStyle} title="Última Nómina" />
-        </View>
-    
-  </View>
-);
+          </View>
+          <View style={buttonStyle}>
+            <Button style={buttonStyle} title="Solicitar Anticipo" />
+          </View>
+          <View style={buttonStyle}>
+            <Button style={buttonStyle} title="Buzón de Quejas" />
+          </View>
+          <View style={buttonStyle}>
+            <Button style={buttonStyle} title="Solicitar Vacaciones" />
+          </View>
+        </ScrollView>
+      </ImageBackground>
+    </View>
 
-export default App;
+  );
+}

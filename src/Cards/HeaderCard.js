@@ -23,7 +23,7 @@ const innerViewStyle = {
 }
 
 const imageStyle = {width: 40, height: 40, borderRadius: 60/ 2};
-
+const image = { uri: "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg" };
 
 export default function HomeScreen() {
   return (
@@ -31,7 +31,7 @@ export default function HomeScreen() {
         <View style={innerViewStyle}>
             <Text style={textStyle}>Hola Patricia</Text>
         </View>
-        <Image style={imageStyle} source={require('../Images/javi.jpg')} />
+        <Image style={imageStyle} source={image} />
     </View>
   );
 }
